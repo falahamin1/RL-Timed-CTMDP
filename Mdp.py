@@ -55,12 +55,16 @@ class Mdp:
             # print("state chosen:",next_state)
             next_step = step + math.ceil(time_spent / self.discretization_factor)
             reward = 0
-            current_label = 'not_final'
-            next_label = 'not_final'
+            current_label = ['notfinal', 'notintermediate']
+            next_label = ['notfinal', 'notintermediate']
             if state in self.final_states:
-                current_label = 'final'
+                current_label[0] = 'final'
             if next_state in self.final_states:
-                next_label = 'final'
+                next_label[0] = 'final'
+            if state in self.intermediate_states:
+                current_label[1] = 'intermediate'
+            if next_state in self.intermediate_states:
+                next_label[1] = 'intermediate'
             reward = 0
             # print(f"Current label in mdp: {current_label}, next label: {next_label}")
 

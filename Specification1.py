@@ -31,9 +31,10 @@ class Specification:
 
     def get_reward(self, input_symbol):
         current_state = self.current_state
+        input_s = input_symbol[0]
         if current_state in transition_function:
-            if input_symbol in transition_function[current_state]:
-                state = self.transition_function[self.current_state][input_symbol]
+            if input_s in transition_function[current_state]:
+                state = self.transition_function[self.current_state][input_s]
             else:
                 print("error, input symbol is wrong")
         else:
