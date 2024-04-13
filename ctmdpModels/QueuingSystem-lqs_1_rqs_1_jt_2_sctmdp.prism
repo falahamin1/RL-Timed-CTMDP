@@ -356,6 +356,7 @@ s: [0..306] init 29;
 endmodule
 
 label goal =  (s=97) | (s=297) | (s=205) | (s=36) | (s=123) | (s=127) | (s=43) | (s=77) | (s=143) | (s=64) | (s=90) | (s=224) | (s=91) | (s=10) | (s=306) | (s=195);
+label intermediate = (s=29) | (s=123)
 
 rewards "default"
   s < 150 : 0.5;
