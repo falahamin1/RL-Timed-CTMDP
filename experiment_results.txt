@@ -1,0 +1,78 @@
+##################### Guaranteed RL looking into ctmdpModels/toy.prism ##############################
+discretization factor: 0.000625
+discretization factor: 0.000625
+discretization factor: 0.000625
+Average q-value: 1.546215000066316e-05
+Time taken for the guaranteed algorithm: 52.724546114603676
+##################### Guaranteed RL looking into ctmdpModels/DynamicPM-tt_3_qs_2_sctmdp.prism ##############################
+discretization factor: 0.0009182736455463726
+discretization factor: 0.0009182736455463726
+discretization factor: 0.0009182736455463726
+Average q-value: 0.3333333333333333
+Time taken for the guaranteed algorithm: 90.02201437950134
+##################### Guaranteed RL looking into ctmdpModels/ErlangStages-k500_r10.prism ##############################
+discretization factor: 0.0001
+discretization factor: 0.0001
+discretization factor: 0.0001
+Average q-value: 0.6666666666666666
+Time taken for the guaranteed algorithm: 150.788552681605
+##################### Guaranteed RL looking into ctmdpModels/DynamicPM-tt_3_qs_6_sctmdp.prism ##############################
+discretization factor: 0.0009182736455463726
+discretization factor: 0.0009182736455463726
+discretization factor: 0.0009182736455463726
+Average q-value: 0.3333333333333333
+Time taken for the guaranteed algorithm: 100.16774694124858
+##################### Guaranteed RL looking into ctmdpModels/ErlangStages-k2000_r10.prism ##############################
+discretization factor: 0.0001
+discretization factor: 0.0001
+discretization factor: 0.0001
+Average q-value: 0.3333333333333333
+Time taken for the guaranteed algorithm: 150.02250464757284
+##################### Guaranteed RL looking into ctmdpModels/ftwc_001_mrmc.prism ##############################
+discretization factor: 0.0024932636441876996
+discretization factor: 0.0024932636441876996
+discretization factor: 0.0024932636441876996
+Average q-value: 0.3333333333333333
+Time taken for the guaranteed algorithm: 75.9513696829478
+##################### Guaranteed RL looking into ctmdpModels/PollingSystem-jt1_qs1_sctmdp.prism ##############################
+discretization factor: 0.0012755102040816328
+discretization factor: 0.0012755102040816328
+discretization factor: 0.0012755102040816328
+Average q-value: 0.6663186693899329
+Time taken for the guaranteed algorithm: 82.38142029444377
+##################### Guaranteed RL looking into ctmdpModels/PollingSystem-jt1_qs4_sctmdp.prism ##############################
+discretization factor: 0.0007716049382716047
+discretization factor: 0.0007716049382716047
+discretization factor: 0.0007716049382716047
+Average q-value: 0.6666666666666666
+Time taken for the guaranteed algorithm: 97.40349102020264
+##################### Guaranteed RL looking into ctmdpModels/PollingSystem-jt1_qs7_sctmdp.prism ##############################
+discretization factor: 0.0007716049382716047
+discretization factor: 0.0007716049382716047
+discretization factor: 0.0007716049382716047
+Average q-value: 0.6666666666666666
+Time taken for the guaranteed algorithm: 97.90452321370442
+##################### Guaranteed RL looking into ctmdpModels/QueuingSystem-lqs_1_rqs_1_jt_2_sctmdp.prism ##############################
+discretization factor: 7.831466833737959e-05
+discretization factor: 7.831466833737959e-05
+discretization factor: 7.831466833737959e-05
+Average q-value: 0.3333333333333333
+Time taken for the guaranteed algorithm: 167.86140632629395
+##################### Guaranteed RL looking into ctmdpModels/QueuingSystem-lqs_2_rqs_2_jt_3_sctmdp.prism ##############################
+discretization factor: 3.857875853555032e-05
+discretization factor: 3.857875853555032e-05
+discretization factor: 3.857875853555032e-05
+Average q-value: 0.3333333333333333
+Time taken for the guaranteed algorithm: 245.84626738230386
+##################### Guaranteed RL looking into ctmdpModels/SJS-procn_2_jobn_2_sctmdp.prism ##############################
+discretization factor: 0.0011111111111111111
+discretization factor: 0.0011111111111111111
+discretization factor: 0.0011111111111111111
+Average q-value: 2.9212020092854775e-17
+Time taken for the guaranteed algorithm: 102.04985372225444
+##################### Guaranteed RL looking into ctmdpModels/SJS-procn_2_jobn_6_sctmdp.prism ##############################
+discretization factor: 2.5e-05
+discretization factor: 2.5e-05
+discretization factor: 2.5e-05
+Average q-value: 1.0
+Time taken for the guaranteed algorithm: 290.5659399827321

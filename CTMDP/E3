@@ -1,0 +1,19 @@
+../mungojerrie DynamicPM-tt_3_qs_6_sctmdp.prism -p final.hoa -m -l Q  --learn-stats --reward-type=zeta-reach --seed=1 >> E3
+
+Input File is DynamicPM-tt_3_qs_6_sctmdp.prism
+@ 2.82168 s: the environment has 21402 nodes, 9528 of which are decision nodes.
+@ 2.83052 s: the terminal DBA has 2 states (0 traps).
+@ 2.86829 s: the product has 21411 nodes, 9537 of which are decision nodes.
+@ 3.0491 s: 9 WECs computed.
+@ 9.35604 s: reachability completed.
+@ 9.3577 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 10.7731 s: learning complete.
+Initial-state value estimate: 3.13682e-15
+Total number of accepting edges seen: 755
+Number of accepting episodes: 12
+Number of steps: 600725
+Average total reward per episode: 0.0006
+Random seed used: 1
+There were 1293 unseen decision nodes reachable under learned strategy for tol 0.01.

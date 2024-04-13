@@ -1,0 +1,105 @@
+../mungojerrie riskReward.prism -p riskReward.hoa -m -l Q  --progress-bar  --learn-stats --reward-type=zeta-reach --seed=1
+Input File is riskReward.prism
+
+Input File is riskReward.prism
+@ 0.007145 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.016159 s: the DBA has 2 states (1 trap).
+@ 0.018668 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.018741 s: 2 WECs computed.
+@ 0.01877 s: reachability completed.
+@ 0.018779 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 6.59075 s: learning complete.
+Initial-state value estimate: 0.998245
+Total number of accepting edges seen: 1588049
+Number of accepting episodes: 15747
+Number of trapped episodes  : 4238
+Number of steps: 2856903
+Average total reward per episode: 0.78735
+Random seed used: 1
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 6.59211 s: end
+
+Input File is riskReward.prism
+@ 0.013307 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.022245 s: the DBA has 2 states (1 trap).
+@ 0.02574 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.026379 s: 2 WECs computed.
+@ 0.026459 s: reachability completed.
+@ 0.02648 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 6.54515 s: learning complete.
+Initial-state value estimate: 0.997837
+Total number of accepting edges seen: 1565144
+Number of accepting episodes: 15534
+Number of trapped episodes  : 4466
+Number of steps: 2845472
+Average total reward per episode: 0.7767
+Random seed used: 2
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 6.54647 s: end
+
+Input File is riskReward.prism
+@ 0.008272 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.015626 s: the DBA has 2 states (1 trap).
+@ 0.018139 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.018213 s: 2 WECs computed.
+@ 0.018242 s: reachability completed.
+@ 0.018251 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 6.71798 s: learning complete.
+Initial-state value estimate: 0.998324
+Total number of accepting edges seen: 1559564
+Number of accepting episodes: 15746
+Number of trapped episodes  : 4240
+Number of steps: 2842075
+Average total reward per episode: 0.7873
+Random seed used: 3
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 6.71932 s: end
+Input File is riskReward.prism
+@ 0.007847 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.016332 s: the DBA has 2 states (1 trap).
+@ 0.019189 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.019264 s: 2 WECs computed.
+@ 0.019293 s: reachability completed.
+@ 0.019302 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 6.62493 s: learning complete.
+Initial-state value estimate: 0.99826
+Total number of accepting edges seen: 1548899
+Number of accepting episodes: 15612
+Number of trapped episodes  : 4385
+Number of steps: 2823861
+Average total reward per episode: 0.7806
+Random seed used: 4
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 6.62626 s: end
+Input File is riskReward.prism
+@ 0.007013 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.01489 s: the DBA has 2 states (1 trap).
+@ 0.017595 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.017668 s: 2 WECs computed.
+@ 0.017696 s: reachability completed.
+@ 0.017705 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 6.43818 s: learning complete.
+Initial-state value estimate: 0.998092
+Total number of accepting edges seen: 1567551
+Number of accepting episodes: 15560
+Number of trapped episodes  : 4415
+Number of steps: 2814367
+Average total reward per episode: 0.778
+Random seed used: 5
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 6.43953 s: end

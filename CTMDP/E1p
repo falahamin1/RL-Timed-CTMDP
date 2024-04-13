@@ -1,0 +1,103 @@
+√ benchmarks % ../mungojerrie riskReward.prism -p riskReward.hoa -m -l Q  --learn-stats --reward-type=reward-on-acc --seed=1 >> E1p 
+
+
+Input File is riskReward.prism
+@ 0.01601 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.029131 s: the DBA has 2 states (1 trap).
+@ 0.032576 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.033565 s: 2 WECs computed.
+@ 0.033641 s: reachability completed.
+@ 0.033662 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.23546 s: learning complete.
+Initial-state value estimate: 12661.8
+Total number of accepting edges seen: 284574
+Number of accepting episodes: 0
+Number of trapped episodes  : 956
+Number of steps: 586175
+Average total reward per episode: 14.2287
+Random seed used: 1
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 1.24192 s: end
+Input File is riskReward.prism
+@ 0.008158 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.015596 s: the DBA has 2 states (1 trap).
+@ 0.018354 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.018427 s: 2 WECs computed.
+@ 0.018455 s: reachability completed.
+@ 0.018464 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.29423 s: learning complete.
+Initial-state value estimate: 14295
+Total number of accepting edges seen: 314399
+Number of accepting episodes: 0
+Number of trapped episodes  : 1443
+Number of steps: 576371
+Average total reward per episode: 15.72
+Random seed used: 2
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 1.29557 s: end
+Input File is riskReward.prism
+@ 0.008357 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.015957 s: the DBA has 2 states (1 trap).
+@ 0.018621 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.018692 s: 2 WECs computed.
+@ 0.018723 s: reachability completed.
+@ 0.018732 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.23853 s: learning complete.
+Initial-state value estimate: 14761.6
+Total number of accepting edges seen: 314569
+Number of accepting episodes: 0
+Number of trapped episodes  : 1539
+Number of steps: 573720
+Average total reward per episode: 15.7285
+Random seed used: 3
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 1.23988 s: end
+Input File is riskReward.prism
+@ 0.008029 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.015366 s: the DBA has 2 states (1 trap).
+@ 0.018107 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.01818 s: 2 WECs computed.
+@ 0.018208 s: reachability completed.
+@ 0.018217 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.26979 s: learning complete.
+Initial-state value estimate: 12660
+Total number of accepting edges seen: 284070
+Number of accepting episodes: 0
+Number of trapped episodes  : 982
+Number of steps: 585932
+Average total reward per episode: 14.2035
+Random seed used: 4
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 1.27112 s: end
+Input File is riskReward.prism
+@ 0.008141 s: the environment has 5 nodes, 4 of which are decision nodes.
+@ 0.0157 s: the DBA has 2 states (1 trap).
+@ 0.018408 s: the product has 10 nodes, 8 of which are decision nodes.
+@ 0.018484 s: 2 WECs computed.
+@ 0.018513 s: reachability completed.
+@ 0.018522 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.28412 s: learning complete.
+Initial-state value estimate: 12683.5
+Total number of accepting edges seen: 284369
+Number of accepting episodes: 0
+Number of trapped episodes  : 968
+Number of steps: 586395
+Average total reward per episode: 14.2185
+Random seed used: 5
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 1.28546 s: end

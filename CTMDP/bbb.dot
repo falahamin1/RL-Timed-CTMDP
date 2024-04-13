@@ -1,0 +1,14 @@
+digraph "Psat=1.000000" {
+node [shape=circle];
+"title" [label="Psat=1.000000",shape=plaintext];
+"0_init" [style=invis]
+"0_init" -> 0
+0 [label="s0, 0, 0\n", shape=box];
+1 [label="action=(Action: safe, Auto: 0)\n", shape=box];
+2 [label="s1, 0, 0\n", shape=box];
+3 [label="action=(Action: reset, Auto: 0)\n", shape=box];
+0 -> 1 [label=" _(0) "];
+1 -> 2 [label=" _(0) "];
+2 -> 3 [label=" _(0) "];
+3 -> 0 [label=" _(1) "];
+}

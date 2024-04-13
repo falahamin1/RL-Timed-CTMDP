@@ -1,0 +1,95 @@
+Input File is DynamicPM-tt_3_qs_2_sctmdp.prism
+@ 0.044338 s: the environment has 1794 nodes, 816 of which are decision nodes.
+@ 0.051346 s: the terminal DBA has 2 states (0 traps).
+@ 0.056037 s: the product has 1803 nodes, 825 of which are decision nodes.
+@ 0.067076 s: 9 WECs computed.
+@ 0.373817 s: reachability completed.
+@ 0.373981 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.59109 s: learning complete.
+Initial-state value estimate: 106.046
+Total number of accepting edges seen: 35210
+Number of accepting episodes: 0
+Number of steps: 600000
+Average total reward per episode: 1.7605
+Random seed used: 1
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 2.13536 s: end
+Input File is DynamicPM-tt_3_qs_2_sctmdp.prism
+@ 0.042689 s: the environment has 1794 nodes, 816 of which are decision nodes.
+@ 0.049886 s: the terminal DBA has 2 states (0 traps).
+@ 0.054605 s: the product has 1803 nodes, 825 of which are decision nodes.
+@ 0.06594 s: 9 WECs computed.
+@ 0.375916 s: reachability completed.
+@ 0.376084 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.62138 s: learning complete.
+Initial-state value estimate: 120.643
+Total number of accepting edges seen: 38492
+Number of accepting episodes: 0
+Number of steps: 600000
+Average total reward per episode: 1.9246
+Random seed used: 2
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 1.98934 s: end
+Input File is DynamicPM-tt_3_qs_2_sctmdp.prism
+@ 0.043808 s: the environment has 1794 nodes, 816 of which are decision nodes.
+@ 0.05104 s: the terminal DBA has 2 states (0 traps).
+@ 0.055975 s: the product has 1803 nodes, 825 of which are decision nodes.
+@ 0.0672 s: 9 WECs computed.
+@ 0.377047 s: reachability completed.
+@ 0.377216 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.63042 s: learning complete.
+Initial-state value estimate: 109.829
+Total number of accepting edges seen: 35742
+Number of accepting episodes: 0
+Number of steps: 600000
+Average total reward per episode: 1.7871
+Random seed used: 3
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 2.13346 s: end
+Input File is DynamicPM-tt_3_qs_2_sctmdp.prism
+@ 0.044728 s: the environment has 1794 nodes, 816 of which are decision nodes.
+@ 0.052067 s: the terminal DBA has 2 states (0 traps).
+@ 0.056855 s: the product has 1803 nodes, 825 of which are decision nodes.
+@ 0.0681 s: 9 WECs computed.
+@ 0.36449 s: reachability completed.
+@ 0.364652 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.62674 s: learning complete.
+Initial-state value estimate: 119.603
+Total number of accepting edges seen: 36365
+Number of accepting episodes: 0
+Number of steps: 600000
+Average total reward per episode: 1.81825
+Random seed used: 4
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 2.10362 s: end
+Input File is DynamicPM-tt_3_qs_2_sctmdp.prism
+@ 0.042979 s: the environment has 1794 nodes, 816 of which are decision nodes.
+@ 0.050123 s: the terminal DBA has 2 states (0 traps).
+@ 0.054971 s: the product has 1803 nodes, 825 of which are decision nodes.
+@ 0.066245 s: 9 WECs computed.
+@ 0.363937 s: reachability completed.
+@ 0.364102 s: probability of satisfaction: 1
+
+--------QLearning--------
+@ 1.62014 s: learning complete.
+Initial-state value estimate: 112.893
+Total number of accepting edges seen: 36598
+Number of accepting episodes: 0
+Number of steps: 600000
+Average total reward per episode: 1.8299
+Random seed used: 5
+There were 0 unseen decision nodes reachable under learned strategy for tol 0.01.
+Probability for tol 0.01 is: 1
+@ 2.08358 s: end
