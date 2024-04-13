@@ -9,7 +9,7 @@ class MDPParser:
         self.available_actions = None
         self.transition_rates = None
         self.final_states = {}
-        self.avoid_states = {}
+        self.intermediate_states = {}
         self.state_action_counters = {}
         self.transition_list = []
         self.transition_probs = None
@@ -43,6 +43,7 @@ class MDPParser:
             # print("Initial State:", self.initial_state)
                  # Skip unnecessary lines until you reach the module section
             
+            self.final_states = set()
             self.final_states = set()
             for line in file:
                 if line.startswith("["):
@@ -81,12 +82,12 @@ class MDPParser:
                                 
                             
                     
-                    elif parts[1] == "avoid":
+                    elif parts[1] == "intermediate":
                         for part in parts:
                             if part == "|" or part =="=":
                                 continue
-                            avoid_state = int(part.split("s=")[1].split(')')[0])
-                            self.avoid_states.add(avoid_state)
+                            intermediate_state = int(part.split("s=")[1].split(')')[0])
+                            self.intermediate_states.add(intermediate_state)
                     
 
 
@@ -138,7 +139,7 @@ class MDPParser:
 
     def run(self, filename):
         self.parse_file(filename)
-        mdp_instance = Mdp(self.num_states,self.num_actions, self.states, self.available_actions, self.transition_probs,self.transition_rates, self.exit_rates, self.initial_state, self.final_states)
+        mdp_instance = Mdp(self.num_states,self.num_actions, self.states, self.available_actions, self.transition_probs,self.transition_rates, self.exit_rates, self.initial_state, self.final_states,self.intermediate_states)
         return mdp_instance
         # mdp_instance.display_mdp()
         # num_states,num_actions, states, available_actions, transition_probs, transition_rates,exit_rates, initial_state, final_states):

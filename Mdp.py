@@ -3,7 +3,7 @@ import math as math
 from Specification1 import Specification
 
 class Mdp:
-    def __init__(self, num_states,num_actions, states, available_actions, transition_probs, transition_rates,exit_rates, initial_state, final_states):
+    def __init__(self, num_states,num_actions, states, available_actions, transition_probs, transition_rates,exit_rates, initial_state, final_states,intermediate_states):
         self.num_states = num_states
         self.states = states
         self.available_actions = available_actions
@@ -13,6 +13,7 @@ class Mdp:
         self.initial_step = 0
         self.discretization_factor = 1
         self.final_states = final_states
+        self.intermediate_states = intermediate_states
         self.num_actions = num_actions
         self.exit_rates = exit_rates
         self.Specification = None
@@ -30,6 +31,7 @@ class Mdp:
     def display_mdp(self):
         print("Initial State:", self.initial_state)
         print("Final State:", self.final_states)
+        print("Intermediate State:",self.intermediate_states)
 
     def reset(self):
         self.Specification.reset()
