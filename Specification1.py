@@ -4,7 +4,7 @@
 import numpy as np
 import math as math
 
-class Specification:
+class Specification1:
     def __init__(self, discretization_factor):
         
         self.discretization_factor = discretization_factor
@@ -14,7 +14,7 @@ class Specification:
         self.current_state = self.initial_state
         self.fstates, self.nfstates = self.fill_states()
         self.transition_function = self.create_transition_function()
-        
+        self.time_bound = 9
         
 
     def get_num_states(self,discretization_factor):
