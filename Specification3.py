@@ -1,4 +1,4 @@
-#Specification (G_[0,1] \not final) and (F_[1,2] final)
+#Specification (F_[0,2] final)
 #This class creates the number of states based on the discretization factor and initializes the transition function of the dfa
 
 import numpy as np
@@ -12,7 +12,7 @@ class Specification1:
         self.transition_function = None
         self.initial_state = 0
         self.current_state = self.initial_state
-        self.fstates, self.nfstates = self.fill_states()
+        self.fstates = self.fill_states()
         self.transition_function = self.create_transition_function()
         self.time_bound = 2
         
@@ -53,9 +53,8 @@ class Specification1:
 
 
     def fill_states(self):
-        nfstates = set(range(self.numstates // 2))
-        fstates = set(range(numstates // 2, numstates))
-        return fstates, nfstates
+        fstates = set(range(numstates))
+        return fstates
 
     def create_transition_function(self):
         numstates = self.numstates
@@ -65,10 +64,6 @@ class Specification1:
             if state in self.fstates:
                 transition_function[state] = {'final': (self.acceptstate) if (state) in fstates else self.deadstate,
                                            'notfinal': (state + 1) if (state + 1) in fstates else self.deadstate}
-            elif state in self.nfstates:
-                # next_state = (state + 1) if (state + 1) in nfstates else (numstates // 2)
-                transition_function[state] = {'final': self.deadstate,
-                                           'notfinal': (state + 1)}
             elif state in self.deadstate:
                 transition_function[state] = {'final': self.deadstate, 'notfinal': self.deadstate}
             else:
