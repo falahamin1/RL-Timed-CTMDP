@@ -82,9 +82,9 @@ class Mdp:
     def get_available_actions(self,state):
         return self.available_actions[state]
     
-    def change_discretization_factor(self, discretization_factor,Specification):
+    def change_discretization_factor(self, discretization_factor):
         self.discretization_factor = discretization_factor
-        self.Specification = Specification(discretization_factor)
+        # self.Specification = Specification(discretization_factor)
     def get_max_exit_rate(self):
         max_exit_rate = 0
         for s in self.states:

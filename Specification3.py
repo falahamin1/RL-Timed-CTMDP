@@ -24,7 +24,7 @@ class Specification3:
             numstates = math.floor(2/discretization_factor)
             self.deadstate = numstates
             self.acceptstate = numstates+1
-            return 
+            return numstates
 
     def reset(self):
         self.current_state = 0
@@ -32,8 +32,8 @@ class Specification3:
     def get_reward(self, input_symbol):
         current_state = self.current_state
         input_s = input_symbol[0]
-        if current_state in transition_function:
-            if input_s in transition_function[current_state]:
+        if current_state in self.transition_function:
+            if input_s in self.transition_function[current_state]:
                 state = self.transition_function[self.current_state][input_s]
             else:
                 print("error, input symbol is wrong")
@@ -42,9 +42,9 @@ class Specification3:
         
         self.current_state = state
 
-        if state in self.acceptstate:
+        if state == self.acceptstate:
             return 1
-        elif state in self.deadstate:
+        elif state == self.deadstate:
             return -1
         else:
             return 0
@@ -53,7 +53,8 @@ class Specification3:
 
 
     def fill_states(self):
-        fstates = set(range(numstates))
+        # nfstates = set(range(self.numstates // 2))
+        fstates = set(range( self.numstates))
         return fstates
 
     def create_transition_function(self):
@@ -62,9 +63,9 @@ class Specification3:
 
         for state in range(numstates + 2):
             if state in self.fstates:
-                transition_function[state] = {'final': (self.acceptstate) if (state) in fstates else self.deadstate,
-                                           'notfinal': (state + 1) if (state + 1) in fstates else self.deadstate}
-            elif state in self.deadstate:
+                transition_function[state] = {'final': (self.acceptstate) if (state) in self.fstates else self.deadstate,
+                                           'notfinal': (state + 1) if (state + 1) in self.fstates else self.deadstate}
+            elif state == self.deadstate:
                 transition_function[state] = {'final': self.deadstate, 'notfinal': self.deadstate}
             else:
                 transition_function[state] = {'final': self.acceptstate, 'notfinal': self.acceptstate}

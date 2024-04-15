@@ -17,7 +17,7 @@ class Specification2:
         self.ifstates = set()
         self.dstate = set()
         self.fill_states()
-        self.transition_function = self.create_transition_function()
+        # self.transition_function = self.create_transition_function()
         self.time_bound = 9
         
 
@@ -28,7 +28,7 @@ class Specification2:
             numstates = math.floor(9/discretization_factor)
             self.deadstate = numstates
             self.acceptstate = numstates+1
-            return 
+            return numstates
 
     def reset(self):
         self.current_state = 0
@@ -120,23 +120,23 @@ class Specification2:
             self.dfstates.add((i,'dfstate'))
         
 
-    def create_transition_function(self):
-        numstates = self.numstates
-        transition_function = {}
+    # def create_transition_function(self):
+    #     numstates = self.numstates
+    #     transition_function = {}
 
-        for state in range(numstates + 2):
-            if state in self.fstates:
-                transition_function[state] = {'final': (self.acceptstate) if (state) in fstates else self.deadstate,
-                                           'notfinal': (state + 1) if (state + 1) in fstates else self.deadstate}
-            elif state in self.nfstates:
-                # next_state = (state + 1) if (state + 1) in nfstates else (numstates // 2)
-                transition_function[state] = {'final': self.deadstate,
-                                           'notfinal': (state + 1)}
-            elif state in self.deadstate:
-                transition_function[state] = {'final': self.deadstate, 'notfinal': self.deadstate}
-            else:
-                transition_function[state] = {'final': self.acceptstate, 'notfinal': self.acceptstate}
-        return transition_function
+    #     for state in range(numstates + 2):
+    #         if state in self.fstates:
+    #             transition_function[state] = {'final': (self.acceptstate) if (state) in fstates else self.deadstate,
+    #                                        'notfinal': (state + 1) if (state + 1) in fstates else self.deadstate}
+    #         elif state in self.nfstates:
+    #             # next_state = (state + 1) if (state + 1) in nfstates else (numstates // 2)
+    #             transition_function[state] = {'final': self.deadstate,
+    #                                        'notfinal': (state + 1)}
+    #         elif state in self.deadstate:
+    #             transition_function[state] = {'final': self.deadstate, 'notfinal': self.deadstate}
+    #         else:
+    #             transition_function[state] = {'final': self.acceptstate, 'notfinal': self.acceptstate}
+    #     return transition_function
            
 
 

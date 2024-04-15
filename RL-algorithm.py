@@ -56,8 +56,9 @@ class RL:
                 parser_instance = MDPParser()
                 mdp = parser_instance.run(self.args.model)
                 self.max_exit_rate = mdp.get_max_exit_rate()
-                Specification = self.get_specification()
-                mdp.change_discretization_factor(self.get_guaranteed_discretization_factor(), Specification)
+                Specification = self.get_specification(self.get_guaranteed_discretization_factor())
+                mdp.get_specification(Specification)
+                mdp.change_discretization_factor(self.get_guaranteed_discretization_factor())
                 rl_instance = GuaranteedRL(self.time_bound, self.args.precision, mdp, self.max_exit_rate)
                 q_val = rl_instance.run()
                 file.write(f"discretization factor: {rl_instance.discretization_factor}\n")
@@ -99,6 +100,8 @@ class RL:
                     mdp = parser_instance.run(filename)
                     self.max_exit_rate = mdp.get_max_exit_rate()
                     mdp.change_discretization_factor(self.get_guaranteed_discretization_factor())
+                    Specification = self.get_specification(self.get_guaranteed_discretization_factor())
+                    mdp.get_specification(Specification)
                     rl_instance = GuaranteedRL(self.time_bound, self.args.precision, mdp, self.max_exit_rate)
                     q_val = rl_instance.run()
                     qvalues += q_val
@@ -109,13 +112,13 @@ class RL:
                 file.write(f"Average q-value: {qvalues/3}\n")
                 file.write(f"Time taken for the guaranteed algorithm: {elapsed_time/3}\n")
     
-    def get_specification(self):
-        if self.args.Specification == 'Specification1.py':
-            Specification = Specification1()
-        elif self.args.Specification == 'Specification2.py':
-            Specification = Specification2()
-        elif self.args.Specification == 'Specification3.py':
-            Specification = Specification3()
+    def get_specification(self, discretization_factor):
+        if self.args.specfile == 'Specification1.py':
+            Specification = Specification1(discretization_factor)
+        elif self.args.specfile == 'Specification2.py':
+            Specification = Specification2(discretization_factor)
+        elif self.args.specfile == 'Specification3.py':
+            Specification = Specification3(discretization_factor)
         else:
             print("Error: No such specification")
         return Specification
