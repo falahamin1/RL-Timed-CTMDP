@@ -92,6 +92,10 @@ class Mdp:
                 action_sum = np.sum(self.transition_rates[s, a, :])
                 max_exit_rate = max(max_exit_rate, action_sum)
         return max_exit_rate
+        
+    def get_specification(self, specification):
+        self.Specification = specification
+
 
 #Todo: For the step function, add something when there are no actions available
 

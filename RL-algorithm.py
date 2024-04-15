@@ -54,6 +54,7 @@ class RL:
                 mdp = parser_instance.run(self.args.model)
                 self.max_exit_rate = mdp.get_max_exit_rate()
                 mdp.change_discretization_factor(self.get_guaranteed_discretization_factor())
+                mdp.get_specification(self.args.specification)
                 rl_instance = GuaranteedRL(self.time_bound, self.args.precision, mdp, self.max_exit_rate)
                 q_val = rl_instance.run()
                 file.write(f"discretization factor: {rl_instance.discretization_factor}\n")
