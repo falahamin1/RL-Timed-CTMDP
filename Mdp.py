@@ -1,6 +1,6 @@
 import numpy as np
 import math as math
-from Specification1 import Specification
+
 
 class Mdp:
     def __init__(self, num_states,num_actions, states, available_actions, transition_probs, transition_rates,exit_rates, initial_state, final_states,intermediate_states):
@@ -82,7 +82,7 @@ class Mdp:
     def get_available_actions(self,state):
         return self.available_actions[state]
     
-    def change_discretization_factor(self, discretization_factor):
+    def change_discretization_factor(self, discretization_factor,Specification):
         self.discretization_factor = discretization_factor
         self.Specification = Specification(discretization_factor)
     def get_max_exit_rate(self):

@@ -4,7 +4,7 @@
 import numpy as np
 import math as math
 
-class Specification1:
+class Specification3:
     def __init__(self, discretization_factor):
         
         self.discretization_factor = discretization_factor

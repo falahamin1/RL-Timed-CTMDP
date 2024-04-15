@@ -7,6 +7,9 @@ import random
 from Parser import MDPParser
 import time
 import argparse
+from Specification1 import Specification1
+from Specification2 import Specification2
+from Specification3 import Specification3
 
 
 class RL:
@@ -53,8 +56,8 @@ class RL:
                 parser_instance = MDPParser()
                 mdp = parser_instance.run(self.args.model)
                 self.max_exit_rate = mdp.get_max_exit_rate()
-                mdp.change_discretization_factor(self.get_guaranteed_discretization_factor())
-                mdp.get_specification(self.args.specification)
+                Specification = self.get_specification()
+                mdp.change_discretization_factor(self.get_guaranteed_discretization_factor(), Specification)
                 rl_instance = GuaranteedRL(self.time_bound, self.args.precision, mdp, self.max_exit_rate)
                 q_val = rl_instance.run()
                 file.write(f"discretization factor: {rl_instance.discretization_factor}\n")
@@ -105,6 +108,18 @@ class RL:
                 elapsed_time = end_time - start_time
                 file.write(f"Average q-value: {qvalues/3}\n")
                 file.write(f"Time taken for the guaranteed algorithm: {elapsed_time/3}\n")
+    
+    def get_specification(self):
+        if self.args.Specification == 'Specification1.py':
+            Specification = Specification1()
+        elif self.args.Specification == 'Specification2.py':
+            Specification = Specification2()
+        elif self.args.Specification == 'Specification3.py':
+            Specification = Specification3()
+        else:
+            print("Error: No such specification")
+        return Specification
+
 
 if __name__ == "__main__":
     app = RL()
