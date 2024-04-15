@@ -44,7 +44,7 @@ class MDPParser:
                  # Skip unnecessary lines until you reach the module section
             
             self.final_states = set()
-            self.final_states = set()
+            self.intermediate_states = set()
             for line in file:
                 if line.startswith("["):
                     # action_name = f"a{len(self.available_actions)}"
@@ -83,11 +83,10 @@ class MDPParser:
                             
                     
                     elif parts[1] == "intermediate":
-                        for part in parts:
-                            if part == "|" or part =="=":
-                                continue
-                            intermediate_state = int(part.split("s=")[1].split(')')[0])
-                            self.intermediate_states.add(intermediate_state)
+                        for i in range(2, len(parts)):
+                            if parts[i] != "|" and parts[i] !="=":
+                                intermediate_state = int(parts[i].split("s=")[1].split(')')[0])
+                                self.intermediate_states.add(intermediate_state)
                     
 
 

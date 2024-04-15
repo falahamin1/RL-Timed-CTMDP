@@ -1,0 +1,7 @@
+##################### Guaranteed RL looking into ctmdpModels/toy.prism ##############################
+discretization factor: 0.00625
+discretization factor: 0.00625
+discretization factor: 0.00625
+Average q-value: 0.8954408566157023
+Time taken for the guaranteed algorithm: 49.494401375452675
+##################### Guaranteed RL looking into ctmdpModels/DynamicPM-tt_3_qs_2_sctmdp.prism ##############################
