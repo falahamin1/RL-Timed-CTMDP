@@ -57,6 +57,7 @@ class RL:
                 mdp = parser_instance.run(self.args.model)
                 self.max_exit_rate = mdp.get_max_exit_rate()
                 Specification = self.get_specification(self.get_guaranteed_discretization_factor())
+                self.time_bound = Specification.time_bound
                 mdp.get_specification(Specification)
                 mdp.change_discretization_factor(self.get_guaranteed_discretization_factor())
                 rl_instance = GuaranteedRL(self.time_bound, self.args.precision, mdp, self.max_exit_rate)
@@ -101,6 +102,7 @@ class RL:
                     self.max_exit_rate = mdp.get_max_exit_rate()
                     mdp.change_discretization_factor(self.get_guaranteed_discretization_factor())
                     Specification = self.get_specification(self.get_guaranteed_discretization_factor())
+                    self.time_bound = Specification.time_bound
                     mdp.get_specification(Specification)
                     rl_instance = GuaranteedRL(self.time_bound, self.args.precision, mdp, self.max_exit_rate)
                     q_val = rl_instance.run()
