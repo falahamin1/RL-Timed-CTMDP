@@ -1,0 +1,27 @@
+##################### Guaranteed RL looking into ctmdpModels/toy.prism ##############################
+discretization factor: 0.003125
+discretization factor: 0.003125
+discretization factor: 0.003125
+Average q-value: 4.4726363353693914e-09
+Time taken for the guaranteed algorithm: 69.96422870953877
+##################### Guaranteed RL looking into ctmdpModels/DynamicPM-tt_3_qs_2_sctmdp.prism ##############################
+discretization factor: 0.004591368227731863
+discretization factor: 0.004591368227731863
+discretization factor: 0.004591368227731863
+Average q-value: 0.0
+Time taken for the guaranteed algorithm: 118.70340236028035
+##################### Guaranteed RL looking into ctmdpModels/ErlangStages-k500_r10.prism ##############################
+discretization factor: 0.0005
+discretization factor: 0.0005
+discretization factor: 0.0005
+Average q-value: 0.6666666666666666
+Time taken for the guaranteed algorithm: 223.86323499679565
+##################### Guaranteed RL looking into ctmdpModels/DynamicPM-tt_3_qs_6_sctmdp.prism ##############################
+discretization factor: 0.004591368227731863
+discretization factor: 0.004591368227731863
+discretization factor: 0.004591368227731863
+Average q-value: 0.0
+Time taken for the guaranteed algorithm: 137.01379934946695
+##################### Guaranteed RL looking into ctmdpModels/ErlangStages-k2000_r10.prism ##############################
+discretization factor: 0.0005
+discretization factor: 0.0005

@@ -1,4 +1,4 @@
-#Specification F_[0,5] (intermediate and F_[2,4] final)
+#Specification F_[0,1] (intermediate and F_[0,1] final)
 #This class creates the number of states based on the discretization factor and initializes the transition function of the dfa
 
 import numpy as np
@@ -18,14 +18,14 @@ class Specification2:
         self.dstate = set()
         self.fill_states()
         # self.transition_function = self.create_transition_function()
-        self.time_bound = 9
+        self.time_bound = 2
         
 
     def get_num_states(self,discretization_factor):
         if discretization_factor > 2: 
             print("Error, large discretization factor")
         else:
-            numstates = math.floor(9/discretization_factor)
+            numstates = math.floor(4/discretization_factor)
             self.deadstate = numstates
             self.acceptstate = numstates+1
             return numstates
@@ -100,8 +100,8 @@ class Specification2:
 
 
     def fill_states(self):
-        istates = (self.numstates*2)//9 #intermediate not seen state
-        dstates = (self.numstates*2)//9 #intermediate seen state
+        istates = (self.numstates*2)//4 #intermediate not seen state
+        dstates = (self.numstates*2)//4 #intermediate seen state
         ifstates = self.numstates - istates - 2 #final can be seen state intermediate not seen
         fstates = self.numstates - istates - 2 #final can be seen state intermediate seen
         dfstates = self.numstates - istates - 2 #final seen state intermediate not seen
