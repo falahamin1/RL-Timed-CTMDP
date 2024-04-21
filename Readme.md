@@ -49,6 +49,8 @@ This script accepts several command-line options to control its execution:
 
 
   ## Running with Docker
+  
+  Make sure that Docker is installed in your system.
 
 1. **Build the Docker Image:**
 
