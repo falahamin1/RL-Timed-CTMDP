@@ -7,14 +7,21 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install TensorFlow and NumPy
-# Note: The version of TensorFlow should be compatible with the version of Python used.
-# Replace 'tensorflow' with 'tensorflow-gpu' if GPU support is needed and available.
-RUN pip install --no-cache-dir tensorflow numpy
+# Install system dependencies for h5py and TensorFlow
+RUN apt-get update && apt-get install -y \
+    libhdf5-dev \
+    libc-ares-dev \
+    libeigen3-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install any other dependencies as required
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+# Install Python dependencies
+RUN pip install --no-cache-dir \
+    numpy \
+    h5py \
+    tensorflow
+
+
 
 # Command to run the script, adjust with actual parameters needed for your application
 CMD ["python", "RL-algorithm.py", "-s", "Specification1.py", "-m", "single", "--model", "path/to/model.prism", "-p", "0.05", "-f", "results.txt"]
