@@ -50,45 +50,63 @@ This script accepts several command-line options to control its execution:
 
   ## Running with Docker
   
-  Make sure that Docker is installed in your system.
+  Make sure that Docker is installed in your system and set to linux container mode.
 
-1. **Build the Docker Image or Unzip the Docker Image:**
+1. **Unzip the Docker Image:**
 
- Navigate to the directory containing the Dockerfile and run:
-
-docker build -t rl-ctmdp-app .
-
-
-To load the Docker image from the compressed file, run:
+- To load the Docker image from the compressed file rl-ctmdp-app.tar.gz ,run:
+  
+  gunzip -c rl-ctmdp-app.tar.gz | docker load 
 
 
-gunzip -c rl-ctmdp-v1.tar.gz | docker load 
-
-or 
-
-docker load < rl-ctmdp-v1.tar.gz
+- For windows device, you can use application like 7-zip to unzip the file, https://www.7-zip.org/. Load  the resulting image in powershell using the following command:
+  
+  docker load -i rl-ctmdp-app.tar
 
 
 
 2. **Run the Docker Container:**
 
-To run the application inside a Docker container, we create a host directory to store the results. In this document, we choose the name of this directory as results, this can be changed. To do this run the following command: 
+Before running the application inside a Docker container, you need to create a directory on your host system where the results from the Docker container will be stored. This directory will be mounted to the container so that any files written to the results directory inside the container are saved on your host system and persist after the container stops.
 
-mkdir -p $(pwd)/results
+By default, this guide assumes you will create the results directory in the same directory where your Docker image is located, which is typically your current working directory. Follow these instructions to create the directory:
+
+-   mkdir -p $(pwd)/results       (for unix based system)
+-   mkdir results                 (for powershell windows)
+
+
 
 Now the program can be run with the commandline arguments (as mentioned previously) as follows:
 
-docker run -it --rm rl-ctmdp-app
+- For Unix systems:
+docker run -it --rm -v $(pwd)/results:/app/results rl-ctmdp-app        
+
+- For Windows (Powershell):
+docker run -it --rm -v $(PWD)/results:/app/results rl-ctmdp-app   
+
 
 The command line arguments can be given in the format mentioned previously, the format is the following:
 
-docker run -it --rm rl-ctmdp:v1 python RL-algorithm.py -s Specification1.py -m single --model ctmdpModels/toy.prism -p 0.05 -f result.txt
+- For  Unix systems:
+
+docker run -it --rm -v $(pwd)/results:/app/results rl-ctmdp-app python RL-algorithm.py -s Specification1.py -m single --model ctmdpModels/toy.prism -p 0.05 -f /app/results/result.txt
+
+- For Windows (Powershell):
+
+docker run -it --rm -v $(PWD)/results:/app/results rl-ctmdp-app python RL-algorithm.py -s Specification1.py -m single --model ctmdpModels/toy.prism -p 0.05 -f /app/results/result.txt
 
 3. **Accessing Files from Docker:**
 
 You can access the result from the results dorectory as follows:
 
+- For Unix systems:
+
 cat $(pwd)/results/result.txt
+
+- For Windows (Powershell):
+
+Get-Content ${PWD}\results\result.txt
+
 
 Here the results.txt file is accesses, this can be changed based on the file you require.
 
