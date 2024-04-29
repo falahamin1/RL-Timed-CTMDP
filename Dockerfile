@@ -21,7 +21,8 @@ RUN pip install --no-cache-dir \
     h5py \
     tensorflow
 
-
+# Ensure the results directory exists
+RUN mkdir -p /app/results
 
 # Command to run the script, adjust with actual parameters needed for your application
 CMD ["python", "RL-algorithm.py", "-s", "Specification1.py", "-m", "single", "--model", "path/to/model.prism", "-p", "0.05", "-f", "results.txt"]

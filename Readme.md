@@ -41,11 +41,11 @@ This script accepts several command-line options to control its execution:
 - **Single Experiment Mode:**
 
   python RL-algorithm.py -s Specification1.py -m single --model ctmdpModels/toy.prism -p 0.05 -f results/result.txt
-  (Here toy.prism is the Mars Rover example shown in the paper)
+  (Here toy.prism is the Mars Rover example shown in the paper.)
 
 -- **Running all the experiments:**
 
-  python RL-algorithm.py -s Specification1.py -m all -p 0.05 -f result.txt
+  python RL-algorithm.py -s Specification1.py -m all -p 0.05 -f results/result.txt
 
 
   ## Running with Docker
