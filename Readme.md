@@ -79,9 +79,11 @@ By default, this guide assumes you will create the results directory in the same
 Now the program can be run with the commandline arguments (as mentioned previously) as follows:
 
 - For Unix systems:
+
 docker run -it --rm -v $(pwd)/results:/app/results rl-ctmdp-app        
 
 - For Windows (Powershell):
+
 docker run -it --rm -v $(PWD)/results:/app/results rl-ctmdp-app   
 
 
